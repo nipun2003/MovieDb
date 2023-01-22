@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MovieDb</string>
     <string name="on_boarding_text_1">All your favourite Movies &amp; Series at one place</string>
-    <string name="on_boarding_text_2">Watch Online or Download Offline</string>
-    <string name="on_boarding_text_3">Create profiles for different members &amp; get personalised recommendations</string>
+    <string name="on_boarding_text_2">Watch Online \nor\nDownload Offline</string>
+    <string name="on_boarding_text_3">Create profiles for different members \n&amp;\n get personalised recommendations</string>
     <string name="on_boarding_text_4">Plans according to your needs at affordable prices</string>
     <string name="on_boarding_text_5">Let’s Get Started !!!</string>
     <string name="next">Next</string>

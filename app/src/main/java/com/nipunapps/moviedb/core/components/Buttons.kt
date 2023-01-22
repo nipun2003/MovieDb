@@ -1,6 +1,7 @@
 package com.nipunapps.moviedb.core.components
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import com.nipunapps.moviedb.core.noRippleClickable
 import com.nipunapps.moviedb.ui.theme.SpacingL
 import com.nipunapps.moviedb.ui.theme.SpacingM
 
@@ -28,6 +30,9 @@ fun FullHeightButtonFilled(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
+                .noRippleClickable {
+                    onClick()
+                }
                 .padding(horizontal = SpacingL, vertical = SpacingM),
             contentAlignment = Alignment.Center
         ) {

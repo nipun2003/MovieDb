@@ -65,7 +65,7 @@ fun SingleOnboarding(
             textAlign = TextAlign.Center,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .fillMaxWidth(0.57f)
+                .fillMaxWidth(0.67f)
                 .padding(bottom = SpacingL),
             color = MaterialTheme.colorScheme.onBackground
         )
@@ -91,7 +91,7 @@ fun Indicator(
                     .clip(CircleShape)
                     .background(
                         if (i == active) MaterialTheme.colorScheme.primary else
-                            MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
+                            MaterialTheme.colorScheme.onBackground
                     )
             )
         }

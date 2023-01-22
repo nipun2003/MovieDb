@@ -1,6 +1,7 @@
 package com.nipunapps.moviedb.ui
 
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -27,11 +28,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        val windowInsetsController =
-            ViewCompat.getWindowInsetsController(window.decorView)
-
-        windowInsetsController?.isAppearanceLightNavigationBars = true
-
         setContent {
             MovieDbTheme {
                 // A surface container using the 'background' color from the theme

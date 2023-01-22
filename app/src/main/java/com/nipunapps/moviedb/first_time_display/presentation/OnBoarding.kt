@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -18,6 +19,7 @@ import com.nipunapps.moviedb.first_time_display.presentation.components.onboardi
 import com.nipunapps.moviedb.ui.theme.ColorBackground
 import com.nipunapps.moviedb.ui.theme.SpacingXL
 import com.nipunapps.moviedb.R
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -28,6 +30,7 @@ fun OnboardingScreen(
         initialPage = 0
     )
     val pageHeight = 0.75f
+    val scope = rememberCoroutineScope()
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -67,7 +70,11 @@ fun OnboardingScreen(
                     .fillMaxWidth()
                     .align(Alignment.Center)
             ) {
-
+                if(pagerState.currentPage != onboardingItems.size-1){
+                    scope.launch {
+                        pagerState.animateScrollToPage(pagerState.currentPage+1)
+                    }
+                }
             }
         }
     }
