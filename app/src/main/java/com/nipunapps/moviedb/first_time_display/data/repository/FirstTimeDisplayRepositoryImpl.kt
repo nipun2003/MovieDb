@@ -1,8 +1,8 @@
 package com.nipunapps.moviedb.first_time_display.data.repository
 
-import android.util.Log
 import androidx.datastore.core.DataStore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -18,7 +18,7 @@ class FirstTimeDisplayRepositoryImpl(
     private val firstTimeSettings: DataStore<FirstTimeDisplaySettings>
 ) : FirstTimeDisplayRepository {
 
-    private val remoteConfig = Firebase.remoteConfig
+    private val remoteConfig: FirebaseRemoteConfig = Firebase.remoteConfig
 
 
     override fun getOnboardingItems(): Flow<Resource<List<OnboardingItem>>> = flow {
@@ -29,9 +29,10 @@ class FirstTimeDisplayRepositoryImpl(
             val onboardingItems = gson.fromJson<List<OnboardingItem>>(
                 onboardingStr,
                 typeToken
-            )
-            onboardingItems.forEach {
-                Log.e("Item",it.toString())
+            ).map {
+                it.copy(
+                    image = "${Constants.IMAGE_BASE_URL}/${it.image}"
+                )
             }
             emit(Resource.Success<List<OnboardingItem>>(onboardingItems))
         } catch (e: Exception) {

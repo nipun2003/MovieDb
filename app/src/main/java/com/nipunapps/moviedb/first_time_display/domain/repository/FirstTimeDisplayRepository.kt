@@ -9,6 +9,7 @@ interface FirstTimeDisplayRepository {
 
     suspend fun setFirstTimeDisplaySettingOver()
 
+
     fun getOnboardingItems() : Flow<Resource<List<OnboardingItem>>>
 
     fun getFirstTimeDisplaySetting(): Flow<FirstTimeDisplaySettings>

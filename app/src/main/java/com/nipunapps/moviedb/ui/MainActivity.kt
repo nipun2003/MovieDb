@@ -1,6 +1,7 @@
 package com.nipunapps.moviedb.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.Window
 import androidx.activity.ComponentActivity
@@ -24,6 +25,12 @@ import androidx.navigation.navigation
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.nipunapps.moviedb.R
+import com.nipunapps.moviedb.core.Constants
 import com.nipunapps.moviedb.feature_auth.presentation.screens.AuthHomeScreen
 import com.nipunapps.moviedb.first_time_display.presentation.OnboardingScreen
 import com.nipunapps.moviedb.first_time_display.presentation.SplashScreen

@@ -8,4 +8,32 @@
         <key>latest_version_of_app</key>
         <value>1.0</value>
     </entry>
+    <entry>
+        <key>on_boarding</key>
+        <value>[
+            {
+            "image" : "on_boarding_1.jpg",
+            "text" : "All your favourite Movies &amp; Series at one place"
+            },
+            {
+            "image" : "on_boarding_2.jpg",
+            "text" : "Watch Online \nor\nDownload Offline"
+            },
+            {
+            "image" : "on_boarding_3.jpg",
+            "text" : "Create profiles for different members \n&amp;\n get personalised
+            recommendations"
+            },
+            {
+            "image" : "on_boarding_4.jpg",
+            "text" : "Plans according to your needs at affordable prices"
+            },
+            {
+            "image":"on_boarding_5.jpg",
+            "text": "Let's Get Started !!!"
+            }
+            ]
+        </value>
+    </entry>
+
 </defaultsMap>

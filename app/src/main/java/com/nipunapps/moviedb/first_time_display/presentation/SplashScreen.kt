@@ -1,5 +1,7 @@
 package com.nipunapps.moviedb.first_time_display.presentation
 
+import android.app.Activity
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,6 +11,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -16,6 +19,7 @@ import com.nipunapps.moviedb.first_time_display.presentation.view_models.SplashV
 import com.nipunapps.moviedb.ui.Screen
 import kotlinx.coroutines.delay
 import com.nipunapps.moviedb.R
+import com.nipunapps.moviedb.ui.MainActivity
 
 @Composable
 fun SplashScreen(

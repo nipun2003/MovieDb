@@ -35,7 +35,7 @@ fun SingleOnboarding(
                 .zIndex(-1f),
             contentScale = ContentScale.FillBounds,
             alignment = Alignment.Center,
-            alpha = 0.6f
+            alpha = 0.8f
         )
         Image(
             painter = painterResource(id = R.drawable.marvel_logo),

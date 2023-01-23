@@ -34,7 +34,8 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirstTimeDisplaySettingRepo(
-        dataStore: DataStore<FirstTimeDisplaySettings>
+        dataStore: DataStore<FirstTimeDisplaySettings>,
+        @ApplicationContext context: Context
     ): FirstTimeDisplayRepository {
         return FirstTimeDisplayRepositoryImpl(dataStore)
     }
