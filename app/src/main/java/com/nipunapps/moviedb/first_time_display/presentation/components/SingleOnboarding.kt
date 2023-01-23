@@ -1,7 +1,5 @@
 package com.nipunapps.moviedb.first_time_display.presentation.components
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -12,43 +10,32 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.zIndex
+import coil.compose.AsyncImage
 import com.nipunapps.moviedb.R
-import com.nipunapps.moviedb.ui.theme.SpacingL
+import com.nipunapps.moviedb.first_time_display.domain.model.OnboardingItem
+import com.nipunapps.moviedb.ui.theme.SpacingM
 import com.nipunapps.moviedb.ui.theme.SpacingS
 import com.nipunapps.moviedb.ui.theme.SpacingXS
-
-
-val onboardingItems = listOf(
-    OnboardingItem(R.drawable.on_boarding_1, R.string.on_boarding_text_1),
-    OnboardingItem(R.drawable.on_boarding_2, R.string.on_boarding_text_2),
-    OnboardingItem(R.drawable.on_boarding_3, R.string.on_boarding_text_3),
-    OnboardingItem(R.drawable.on_boarding_4, R.string.on_boarding_text_4),
-    OnboardingItem(R.drawable.on_boarding_5, R.string.on_boarding_text_5)
-)
-
-data class OnboardingItem(
-    @DrawableRes
-    val image: Int,
-    @StringRes
-    val text: Int,
-)
 
 @Composable
 fun SingleOnboarding(
     onboardingItem: OnboardingItem
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = onboardingItem.image),
-            contentDescription = stringResource(id = onboardingItem.text),
-            modifier = Modifier.fillMaxSize(),
+        AsyncImage(
+            model = onboardingItem.image,
+            contentDescription = onboardingItem.text,
+            modifier = Modifier
+                .fillMaxSize()
+                .zIndex(-1f),
             contentScale = ContentScale.FillBounds,
             alignment = Alignment.Center,
-            alpha = 0.9f
+            alpha = 0.6f
         )
         Image(
             painter = painterResource(id = R.drawable.marvel_logo),
@@ -59,16 +46,33 @@ fun SingleOnboarding(
             contentScale = ContentScale.FillBounds,
             alignment = Alignment.Center
         )
-        Text(
-            text = stringResource(id = onboardingItem.text),
-            style = MaterialTheme.typography.displayLarge,
-            textAlign = TextAlign.Center,
+        Box(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .fillMaxWidth(0.67f)
-                .padding(bottom = SpacingL),
-            color = MaterialTheme.colorScheme.onBackground
-        )
+                .fillMaxWidth()
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            MaterialTheme.colorScheme.background.copy(alpha = 0.0f),
+                            MaterialTheme.colorScheme.background.copy(alpha = 0.6f),
+                            MaterialTheme.colorScheme.background.copy(alpha = 0.7f),
+                            MaterialTheme.colorScheme.background.copy(alpha = 0.8f),
+                            MaterialTheme.colorScheme.background,
+                        )
+                    )
+                )
+                .padding(vertical = SpacingM),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = onboardingItem.text,
+                style = MaterialTheme.typography.displayLarge,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth(0.67f),
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        }
     }
 }
 

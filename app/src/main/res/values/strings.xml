@@ -7,4 +7,6 @@
     <string name="on_boarding_text_5">Let’s Get Started !!!</string>
     <string name="next">Next</string>
     <string name="continuee">Continue</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 </resources>

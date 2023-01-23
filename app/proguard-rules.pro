@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.nipunapps.moviedb.first_time_display.data.local.dto.* { *; }
+-keep class com.nipunapps.moviedb.first_time_display.domain.model.* { *; }
+-keep class com.nipunapps.moviedb.feature_auth.domain.model.UserModel { *; }

@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "310939846306",
+    "project_id": "moviehub-9e961",
+    "storage_bucket": "moviehub-9e961.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310939846306:android:67beba073b4349c31439fb",
+        "android_client_info": {
+          "package_name": "com.nipunapps.moviedb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310939846306-vaaa9atfucfkah2qvduduek9e07cknsk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-baN9teL1QS6kJKPKsjrODTUgs-vDWsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310939846306-3vbhop4cbdlsrh0h15qlmej8ghqa8g2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310939846306:android:a1f529f6bad581491439fb",
+        "android_client_info": {
+          "package_name": "com.nipunapps.moviehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310939846306-e9pe8euoq5hgjcajajc8bpndss0oghug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nipunapps.moviehub",
+            "certificate_hash": "58a63c6757ac85c0b972fb98e333bb981d57898f"
+          }
+        },
+        {
+          "client_id": "310939846306-vaaa9atfucfkah2qvduduek9e07cknsk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-baN9teL1QS6kJKPKsjrODTUgs-vDWsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310939846306-3vbhop4cbdlsrh0h15qlmej8ghqa8g2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
