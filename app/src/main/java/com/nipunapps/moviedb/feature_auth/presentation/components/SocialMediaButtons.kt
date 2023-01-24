@@ -84,7 +84,8 @@ fun SocialMediaButton(
 fun AlternateAuthOption(
     modifier: Modifier = Modifier,
     disabledText: Int,
-    clickableText: Int
+    clickableText: Int,
+    onOptionClick : ()-> Unit
 ) {
     val disabledColor = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
     val clickableColor = MaterialTheme.colorScheme.primary
