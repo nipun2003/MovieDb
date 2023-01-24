@@ -4,6 +4,7 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -14,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.nipunapps.moviedb.core.noRippleClickable
 import com.nipunapps.moviedb.ui.theme.BorderL
+import com.nipunapps.moviedb.ui.theme.ButtonHeight
 import com.nipunapps.moviedb.ui.theme.SpacingL
 import com.nipunapps.moviedb.ui.theme.SpacingM
 

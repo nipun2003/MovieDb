@@ -22,17 +22,17 @@ val InterFamily = FontFamily(
 
 // Font sizes
 
-val HeadlineLarge = 32.sp
-val HeadlineMedium = 28.sp
-val HeadlineSmall = 24.sp
+val HeadlineLarge = 30.sp
+val HeadlineMedium = 26.sp
+val HeadlineSmall = 22.sp
 
-val DisplayLarge = 24.sp
+val DisplayLarge = 22.sp
 val DisplayMedium = 20.sp
 val DisplaySmall = 18.sp
 
-val TitleLarge = 22.sp
+val TitleLarge = 20.sp
 val TitleMedium = 18.sp
-val TitleSmall = 16.sp
+val TitleSmall = 14.sp
 
 val BodyLarge = 16.sp
 val BodyMedium = 14.sp
@@ -85,7 +85,7 @@ val Typography = Typography(
     ),
     titleSmall = TextStyle(
         fontSize = TitleSmall,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         fontFamily = InterFamily
     ),
     bodyLarge = TextStyle(
@@ -102,6 +102,20 @@ val Typography = Typography(
         fontSize = BodySmall,
         fontWeight = FontWeight.Thin,
         fontFamily = InterFamily
+    ),
+    labelLarge = TextStyle(
+        fontSize = TitleLarge,
+        fontWeight = FontWeight.ExtraBold,
+        fontFamily = InterFamily
+    ),
+    labelMedium = TextStyle(
+        fontSize = BodyLarge,
+        fontWeight = FontWeight.ExtraBold,
+        fontFamily = InterFamily
+    ),
+    labelSmall = TextStyle(
+        fontSize = BodyMedium,
+        fontWeight = FontWeight.ExtraBold,
+        fontFamily = InterFamily
     )
-
 )

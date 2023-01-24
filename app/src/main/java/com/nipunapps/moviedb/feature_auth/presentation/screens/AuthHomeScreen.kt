@@ -14,6 +14,8 @@ import com.nipunapps.moviedb.core.Constants
 import com.nipunapps.moviedb.core.components.CustomFilledButton
 import com.nipunapps.moviedb.core.components.CustomOutlinedButton
 import com.nipunapps.moviedb.core.components.GradientImage
+import com.nipunapps.moviedb.ui.AuthScreens
+import com.nipunapps.moviedb.ui.Screen
 import com.nipunapps.moviedb.ui.theme.SpacingXL
 
 @Composable
@@ -54,11 +56,11 @@ fun AuthHomeScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 CustomFilledButton(text = R.string.login, modifier = Modifier.fillMaxWidth()) {
-
+                    navController.navigate(AuthScreens.LoginScreen.route)
                 }
                 Spacer(modifier = Modifier.height(SpacingXL))
                 CustomOutlinedButton(text = R.string.register, modifier = Modifier.fillMaxWidth()) {
-
+                    navController.navigate(AuthScreens.RegisterScreen.route)
                 }
             }
         }

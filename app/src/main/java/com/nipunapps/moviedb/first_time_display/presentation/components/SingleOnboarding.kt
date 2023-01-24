@@ -20,6 +20,7 @@ import com.nipunapps.moviedb.R
 import com.nipunapps.moviedb.first_time_display.domain.model.OnboardingItem
 import com.nipunapps.moviedb.ui.theme.SpacingM
 import com.nipunapps.moviedb.ui.theme.SpacingS
+import com.nipunapps.moviedb.ui.theme.SpacingXL
 import com.nipunapps.moviedb.ui.theme.SpacingXS
 
 @Composable
@@ -66,10 +67,11 @@ fun SingleOnboarding(
         ) {
             Text(
                 text = onboardingItem.text,
-                style = MaterialTheme.typography.displayLarge,
+                style = MaterialTheme.typography.displayMedium,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
-                    .fillMaxWidth(0.67f),
+                    .fillMaxWidth()
+                    .padding(horizontal = SpacingXL),
                 color = MaterialTheme.colorScheme.onBackground
             )
         }

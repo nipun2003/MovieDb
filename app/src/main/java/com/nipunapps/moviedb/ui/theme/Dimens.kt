@@ -12,3 +12,4 @@ val SpacingM = 16.dp
 val SpacingL = 24.dp
 val SpacingXL = 32.dp
 val SpacingXXL = 40.dp
+val ButtonHeight = 50.dp

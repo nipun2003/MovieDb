@@ -32,6 +32,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.nipunapps.moviedb.R
 import com.nipunapps.moviedb.core.Constants
 import com.nipunapps.moviedb.feature_auth.presentation.screens.AuthHomeScreen
+import com.nipunapps.moviedb.feature_auth.presentation.screens.RegisterScreen
 import com.nipunapps.moviedb.first_time_display.presentation.OnboardingScreen
 import com.nipunapps.moviedb.first_time_display.presentation.SplashScreen
 import com.nipunapps.moviedb.ui.theme.ColorBackground
@@ -79,6 +80,12 @@ class MainActivity : ComponentActivity() {
         ) {
             composable(route = AuthScreens.HomeScreen.route) {
                 AuthHomeScreen(navController = navController)
+            }
+            composable(route = AuthScreens.RegisterScreen.route){
+                RegisterScreen(navController = navController)
+            }
+            composable(route = AuthScreens.LoginScreen.route){
+
             }
         }
     }

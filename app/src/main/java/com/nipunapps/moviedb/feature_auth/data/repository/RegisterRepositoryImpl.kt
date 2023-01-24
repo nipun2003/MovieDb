@@ -1,7 +1,6 @@
 package com.nipunapps.moviedb.feature_auth.data.repository
 
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.nipunapps.moviedb.core.Resource
 import com.nipunapps.moviedb.feature_auth.data.remote.FirestoreManager
@@ -18,8 +17,6 @@ class RegisterRepositoryImpl(
 ) : RegisterRepository {
 
     private val auth = Firebase.auth
-    private val firestore = Firebase.firestore
-
 
     override fun createUserWithEmailAndPassword(
         email: String,

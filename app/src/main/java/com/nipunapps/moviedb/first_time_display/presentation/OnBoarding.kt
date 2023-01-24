@@ -1,11 +1,11 @@
 package com.nipunapps.moviedb.first_time_display.presentation
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,7 +20,6 @@ import com.nipunapps.moviedb.ui.Screen
 import com.nipunapps.moviedb.ui.theme.SpacingXL
 import kotlinx.coroutines.launch
 
-@SuppressLint("StateFlowValueCalledInComposition")
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(
@@ -32,7 +31,7 @@ fun OnboardingScreen(
     )
     val pageHeight = 0.75f
     val scope = rememberCoroutineScope()
-    val onboardingItems = onboardingViewModel.onboardingItems.value
+    val onboardingItems = onboardingViewModel.onboardingItems.collectAsState().value
     Box(
         modifier = Modifier
             .fillMaxSize()
